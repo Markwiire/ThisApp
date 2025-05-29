@@ -64,6 +64,11 @@ public class RegisterActivity extends AppCompatActivity {
                 return;
             }
 
+            if (!password.matches("^(?=.*[0-9])(?=.*[a-zA-Z]).{8,}$")) {
+                Toast.makeText(this, "Пароль должен содержать буквы и цифры", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             if (!password.equals(repeatPassword)) {
                 Toast.makeText(this, "Пароли не совпадают", Toast.LENGTH_SHORT).show();
                 return;
