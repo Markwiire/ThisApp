@@ -54,10 +54,18 @@ public class RegisterActivity extends AppCompatActivity {
             String password = NewPassword.getText().toString();
             String repeatPassword = RepeatPassword.getText().toString();
 
-            if (username.isEmpty() || password.isEmpty() || repeatPassword.isEmpty()) {
-                Toast.makeText(this, "Пожалуйста, заполните все поля", Toast.LENGTH_SHORT).show();
+            if (username.isEmpty()) {
+                NewLogin.setError("Введите имя пользователя");
                 return;
             }
+
+            if (password.isEmpty()) {
+                NewPassword.setError("Введите пароль");
+                return;
+            }
+
+            if (repeatPassword.isEmpty()) {
+                RepeatPassword.setError("Повторите пароль");
 
             if (password.length() < MIN_PASSWORD_LENGTH) {
                 Toast.makeText(this, "Пароль должен содержать минимум " + MIN_PASSWORD_LENGTH + " символов", Toast.LENGTH_SHORT).show();
