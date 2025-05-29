@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Все заявки"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:background="#A696E2">
+
+                    <TextView
+                        android:text="Id"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:padding="16dp"/>
+                    <TextView
+                        android:text="IdUser"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:padding="16dp"/>
+
+                    <TextView
+                        android:text="Name"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:padding="16dp"/>
+
+                    <TextView
+                        android:text="Description"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:padding="16dp"/>
+
+                    <TextView
+                        android:text="DateCreated"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:padding="16dp"/>
+
+                    <TextView
+                        android:text="Status"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:padding="16dp"/>
+
+                    <TextView
+                        android:text="Comment"
+                        android:textColor="#FFFFFF"
+                        android:padding="8dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:text="Действие"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:padding="16dp"/>
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Назад"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Обновить"/>
+    </LinearLayout>
+</LinearLayout>

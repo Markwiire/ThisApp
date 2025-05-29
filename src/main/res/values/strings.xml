@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CRM1</string>
+    <string-array name="status_array">
+        <item>На рассмотрении</item>
+        <item>В процессе</item>
+        <item>Завершена</item>
+    </string-array>
+</resources>
